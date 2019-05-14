@@ -1,40 +1,38 @@
 import React, { Component } from 'react'
-import { TouchableOpacity, FlatList, View, Text, StyleSheet } from 'react-native'
+import { TouchableOpacity, View, Text, StyleSheet } from 'react-native'
 
 class EmojiDict extends Component {
-	state = {
-	  '😃': '😃 Smiley',
-	  '🚀': '🚀 Rocket',
-	  '⚛️': '⚛️ Atom Symbol'
-	};
+  state = {
+    'hello': 'hello'
+  }
 
   openPopup() {
     console.log('hello')
   }
 
-	render() {
-  		return (
+  render() {
+    return (
 
-        <View style={styles.container}>
-          <Text>
+      <View style={styles.container}>
+        <Text>
               Hello World
-          </Text>
-          <TouchableOpacity onPress={this.openPopup}>
+        </Text>
+        <TouchableOpacity onPress={this.openPopup}>
           <View>
-            <Text>{this.state['😃']} </Text>
+            <Text>{this.state['hello']} </Text>
           </View>
-          </TouchableOpacity>
-        </View>
-  		);
-	}
+        </TouchableOpacity>
+      </View>
+    )
+  }
 }
 
 const styles = StyleSheet.create({
-	container: {
-		flex: 1,
-		justifyContent: 'center',
-		alignItems: 'center'
-	}
-});
+  container: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center'
+  }
+})
 
-export default EmojiDict;
+export default EmojiDict
